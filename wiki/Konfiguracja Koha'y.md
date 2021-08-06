@@ -1,15 +1,15 @@
 ## Web installer
 ### Login
-Login: `koha_library` where library is the name of created library
-Password: from `/etc/koha/sites/library/koha-conf.xml` (where library is the name) inside `config` > `pass`
+Login: `koha_library` gdzie library to nazwa stworzonej biblioteki
+Password: w pliku `/etc/koha/sites/library/koha-conf.xml` (gdzie library to nazwa biblioteki) wewnątrz `config` > `pass`
 ### Choose your language
 Select a language: **en**
 ### Check Perl dependencies
 Continue
 ### Database settigns
-Continue and continue
+Continue i continue
 ### Set up database
-Continue and continue
+Continue i continue
 ### Install basic configuration settings
 Continue
 ### Select your MARC flavor
@@ -50,18 +50,18 @@ You can change these at any time after installation.
 ✅Sample quotes  
 ✅Allow access to the following servers to search and download record information
 
-#### Settings explanation
-[Koha Installation on Ubuntu Linux - YouTube; Timestamp: 16:07](https://youtu.be/ooPIgy-rBVU?t=967)
+#### Wyjaśnienie poszczególnych opcji
+[Koha Installation on Ubuntu Linux - YouTube; Od: 16:07](https://youtu.be/ooPIgy-rBVU?t=967)
 
 ### Create a library
 Library code: `HSP`
-Name: `Hackerspace Pomorze Library`, or `Biblioteka Hackerspace Pomorze`
+Name: `Hackerspace Pomorze Library` lub `Biblioteka Hackerspace Pomorze`
 ### Create Koha administrator patron
 #### Administrator identity
 Surname: *Kowalski*
 First name: *Jan*
 Card number: *1337*
-Library: `Hackerspace Pomorze Library` 
+Library: `Hackerspace Pomorze Library`
 Patron category: `Staff`
 #### Administrator login
 Username: `jkowalski`
@@ -88,24 +88,24 @@ Share my Koha usage statistics: `No`
 ### Importing MARC entries from file
 https://kohageek.blogspot.com/2016/12/import-marc-records-into-koha.html
 
-## Commands
-### Installing different language
-`koha-translate --list` - download list of languages
-`koha-translate --list --available` - show list of available languages
-`koha-translate --install pl-PL` - install Polish language
+## Komendy
+### Instalowanie innych języków
+`koha-translate --list` - pobierz listę języków
+`koha-translate --list --available` - pokaż listę dostępnych języków
+`koha-translate --install pl-PL` - zainstaluj język polski
 
-## Tips
+## Porady
 Nie działa wyszukiwanie? Użyj komendy `koha-rebuild-zebra`
--   `-f, --full` Does a reindex of the whole collection. Will run even if USE_INDEXER_DAEMON=yes.
--   `-a, --authorities` Only run the indexing process for authority records.
--   `-b, --biblios` Only run the indexing process for biblio records.
--   `-q, --quiet` Sometimes be a bit quieter for scripts/cronjobs.
--   `-v, --verbose` Be verbose. Useful for debugging indexing problems.
+-   `-f, --full` Reindeksuje całą kolekcję. Wykona się, nawet jeśli USE_INDEXER_DAEMON=yes.
+-   `-a, --authorities` Wykonuje proces indeksowania dla rekordów authority.
+-   `-b, --biblios` Wykonuje proces indeksowania dla rekordów biblio.
+-   `-q, --quiet` Może być ciut szybsze, przydatne dla skryptów/cronjobs
+-   `-v, --verbose` Tryb gadatliwy, przydatny dla debugowania.
 
 Przykład: `koha-rebuild-zebra -v -f library`
 
-Connection to the memcached servers failed? Try this https://kohageek.blogspot.com/2018/06/enable-memcached-with-koha.html
-Type `sudo apt-get install memcached`, if installed run this command `sudo service memcached restart`.
+Połączenie z serwerami memcached nie działa? Spróbuj tego https://kohageek.blogspot.com/2018/06/enable-memcached-with-koha.html
+Wpisz `sudo apt-get install memcached`, jeśli jest już zainstalowane wpisz `sudo service memcached restart`.
 
 ## License
 CC BY 4.0 Maciej Błędkowski (@mble) for Hackerspace Pomorze
